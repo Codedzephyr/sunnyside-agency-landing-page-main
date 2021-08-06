@@ -101,6 +101,7 @@ nav {
   }
   .navbar-logo .navigation-icon {
     display: block;
+    cursor: pointer;
   }
   #navigation {
     height: 200px;
@@ -124,7 +125,7 @@ nav {
     background-color: white;
   }
   .nav-links > li {
-    margin: 10px 20px;
+    margin: 20px 20px;
   }
   .nav-links > li > a:hover {
     background-color: none;
@@ -132,6 +133,10 @@ nav {
   }
   .nav-links > li > a {
     color: #818498;
+  }
+  .nav-links > li > a:hover {
+    background-color: yellow;
+    border-radius: 16px;
   }
   .nav-links::after {
     content: "";
