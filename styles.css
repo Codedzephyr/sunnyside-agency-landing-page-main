@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap");
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -22,6 +22,7 @@ body {
 
 section.first-section {
   min-height: calc(101vh - 12.8px);
+  width: 100%;
   background-image: url(./images/desktop/image-header.jpg);
   background-size: cover;
   background-position: center 100%;
@@ -82,6 +83,135 @@ nav {
   border-radius: 16px;
 }
 
+.title-container {
+  width: 100%;
+  margin: 70px 0px 0px;
+  letter-spacing: 0.9rem;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  height: 10vh;
+}
+
+.title-container .title {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+
+.second-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(60vh - 12.8px);
+}
+
+.second-section .caption {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second-section .caption-details {
+  width: 50%;
+  height: 60%;
+}
+
+.second-section .caption-details .title {
+  color: #000;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.second-section .caption-details .description {
+  margin: 30px 0px 30px 0px;
+  font-family: "Barlow", sans-serif;
+}
+
+.second-section .caption-details .title1 {
+  color: #000;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #fad400;
+          text-decoration-color: #fad400;
+}
+
+.second-section .background-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: url(./images/desktop/image-transform.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.third-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(60vh - 12.8px);
+}
+
+.third-section .background-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: url(./images/desktop/image-stand-out.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.third-section .content-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.third-section .content-container .content {
+  width: 50%;
+  height: 60%;
+}
+
+.third-section .content-container .content .title {
+  color: #000;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.third-section .content-container .content .description {
+  margin: 30px 0px 30px 0px;
+  font-family: "Barlow", sans-serif;
+}
+
+.third-section .content-container .content .title1 {
+  color: #000;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #fe7867;
+          text-decoration-color: #fe7867;
+}
+
 @media screen and (max-width: 768px) {
   nav {
     -webkit-box-orient: vertical;
@@ -108,10 +238,10 @@ nav {
     width: 100%;
     margin: 0 auto;
     margin: 53px 0px 0px 0px;
-    display: none;
+    display: block;
   }
   #navigation.nav-links-container {
-    display: block;
+    display: none;
   }
   .nav-links {
     margin: 0 auto;
@@ -147,6 +277,45 @@ nav {
     border-width: 20px;
     border-style: solid;
     border-color: transparent white white transparent;
+  }
+  .second-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: calc(100vh - 12.8px);
+  }
+  .second-section .background-image {
+    background-image: url(./images/mobile/image-transform.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .second-section .caption-details {
+    text-align: center;
+    width: 80%;
+  }
+  .third-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: calc(100vh - 12.8px);
+  }
+  .third-section .background-image {
+    display: none;
+  }
+  .third-section .background-image1 {
+    background-image: url(./images/mobile/image-stand-out.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .third-section .content-container .content {
+    text-align: center;
+    width: 80%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

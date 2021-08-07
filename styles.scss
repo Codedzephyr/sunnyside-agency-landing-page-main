@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap");
 
 // Defining standard variables and values for project
 
@@ -21,9 +21,9 @@ $White: hsl(0, 0%, 100%);
 $fontsize: 18px;
 
 //font
-$fontweight1: 600;
-$fontweight2: 700;
-$fontweight3: 900;
+$fontweight6: 600;
+$fontweight7: 700;
+$fontweight9: 900;
 
 // font type
 $Barlow: "Barlow", sans-serif;
@@ -51,6 +51,7 @@ body {
 //first section pertaining to nav
 section.first-section {
   min-height: calc(101vh - 12.8px);
+  width: 100%;
   background-image: url(./images/desktop/image-header.jpg);
   background-size: cover;
   background-position: center 100%;
@@ -108,6 +109,109 @@ nav {
 // section.first section closing styles
 // closing main style
 
+.title-container {
+  width: 100%;
+  margin: 70px 0px 0px;
+  letter-spacing: 0.9rem;
+  text-transform: uppercase;
+  font-family: $Fraunces;
+  height: 10vh;
+
+  .title {
+    color: $White;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+.second-section {
+  display: flex;
+  height: calc(60vh - 12.8px);
+
+  .caption {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .caption-details {
+    width: 50%;
+    height: 60%;
+
+    .title {
+      color: #000;
+      font-family: $Fraunces;
+      font-weight: $fontweight9;
+    }
+
+    .description {
+      margin: 30px 0px 30px 0px;
+      font-family: $Barlow;
+    }
+
+    .title1 {
+      color: #000;
+      font-family: $Fraunces;
+      font-weight: $fontweight9;
+      text-decoration: underline;
+      text-decoration-color: $Yellow;
+    }
+  }
+
+  .background-image {
+    flex: 1;
+    background: url(./images/desktop/image-transform.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.third-section {
+  display: flex;
+  height: calc(60vh - 12.8px);
+
+  .background-image {
+    flex: 1;
+    background: url(./images/desktop/image-stand-out.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .content-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      width: 50%;
+      height: 60%;
+
+      .title {
+        color: #000;
+        font-family: $Fraunces;
+        font-weight: $fontweight9;
+      }
+
+      .description {
+        margin: 30px 0px 30px 0px;
+        font-family: $Barlow;
+      }
+
+      .title1 {
+        color: #000;
+        font-family: $Fraunces;
+        font-weight: $fontweight9;
+        text-decoration: underline;
+        text-decoration-color: $softred;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -129,11 +233,11 @@ nav {
     width: 100%;
     margin: 0 auto;
     margin: 53px 0px 0px 0px;
-    display: none;
+    display: block;
   }
 
   #navigation.nav-links-container {
-    display: block;
+    display: none;
   }
 
   .nav-links {
@@ -172,5 +276,44 @@ nav {
     border-width: 20px;
     border-style: solid;
     border-color: transparent $White $White transparent;
+  }
+
+  .second-section {
+    flex-direction: column;
+    height: calc(100vh - 12.8px);
+
+    .background-image {
+      background-image: url(./images/mobile/image-transform.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .caption-details {
+      text-align: center;
+      width: 80%;
+    }
+  }
+  .third-section {
+    flex-direction: column;
+    min-height: calc(100vh - 12.8px);
+
+    .background-image {
+      display: none;
+    }
+
+    .background-image1 {
+      background-image: url(./images/mobile/image-stand-out.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      flex: 1;
+    }
+
+    .content-container {
+      .content {
+        text-align: center;
+        width: 80%;
+      }
+    }
   }
 }
