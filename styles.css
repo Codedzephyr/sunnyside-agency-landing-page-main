@@ -569,6 +569,7 @@ footer .content .footer-links-container .footer-links {
 
 footer .content .footer-links-container .footer-links-item a {
   cursor: pointer;
+  font-family: "Barlow", sans-serif;
   text-decoration: none;
   color: #25564b;
   font-size: 18px;
