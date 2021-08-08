@@ -112,15 +112,29 @@ nav {
 .title-container {
   width: 100%;
   margin: 70px 0px 0px;
-  letter-spacing: 0.9rem;
+  letter-spacing: 0.7rem;
   text-transform: uppercase;
   font-family: $Fraunces;
-  height: 10vh;
+  height: 20vh;
 
   .title {
     color: $White;
     text-align: center;
-    font-size: 40px;
+  }
+
+  .image-container {
+    width: 80%;
+    margin: 0 auto;
+    height: 30vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+
+  .image-container img {
+    height: 20vh;
+    position: absolute;
+    bottom: 0px;
   }
 }
 
@@ -154,8 +168,12 @@ nav {
       color: #000;
       font-family: $Fraunces;
       font-weight: $fontweight9;
+    }
+
+    .title1:hover {
       text-decoration: underline;
       text-decoration-color: $Yellow;
+      cursor: pointer;
     }
   }
 
@@ -204,7 +222,11 @@ nav {
       .title1 {
         color: #000;
         font-family: $Fraunces;
+        cursor: pointer;
         font-weight: $fontweight9;
+      }
+
+      .title1:hover {
         text-decoration: underline;
         text-decoration-color: $softred;
       }
@@ -289,7 +311,7 @@ nav {
     .title {
       text-transform: uppercase;
       text-align: center;
-      letter-spacing: 0.9rem;
+      letter-spacing: 0.7rem;
       font-family: $Fraunces;
       color: $grayishblue;
     }
@@ -405,41 +427,109 @@ nav {
 }
 
 .sixth-section {
-  display: flex;
+  display: grid;
   height: calc(55vh - 12.8px);
-  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
 
   .background-image {
     background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
     background-size: cover;
-    flex: 1;
+
     background-position: center;
     background-repeat: no-repeat;
   }
   .background-image1 {
     background-image: url(./images/desktop/image-gallery-orange.jpg);
     background-size: cover;
-    flex: 1;
+
     background-position: center;
     background-repeat: no-repeat;
   }
   .background-image2 {
     background-image: url(./images/desktop/image-gallery-cone.jpg);
     background-size: cover;
-    flex: 1;
+
     background-position: center;
     background-repeat: no-repeat;
   }
   .background-image3 {
     background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
     background-size: cover;
-    flex: 1;
+
     background-position: center;
     background-repeat: no-repeat;
   }
 }
 
+footer {
+  max-width: 100%;
+  min-height: calc(50vh - 12.8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $Darkmoderatecyan;
+
+  .content {
+    width: 80%;
+    margin: 0 auto;
+    min-height: calc(30vh - 12.8px);
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+
+      svg .path {
+        fill: $Darkdesaturatedcyan;
+      }
+    }
+
+    .footer-links-container {
+      width: 250px;
+      margin: 40px auto 40px auto;
+
+      .footer-links {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+      }
+
+      .footer-links-item a {
+        cursor: pointer;
+        text-decoration: none;
+        color: $Darkdesaturatedcyan;
+        font-size: $fontsize;
+      }
+
+      .footer-links-item a:hover {
+        color: $White;
+      }
+    }
+
+    .social-media-icons {
+      width: 200px;
+      margin: 100px auto 0px auto;
+      display: flex;
+      justify-content: space-between;
+
+      svg {
+        cursor: pointer;
+      }
+      svg .path {
+        fill: $Darkdesaturatedcyan;
+      }
+
+      svg .path:hover {
+        fill: $White;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
+  section.first-section {
+    background-image: url(./images/mobile/image-header.jpg);
+  }
   nav {
     flex-direction: column;
   }
@@ -505,6 +595,15 @@ nav {
     border-color: transparent $White $White transparent;
   }
 
+  .title-container .image-container {
+    height: 45vh;
+  }
+
+  .title-container .title {
+    // letter-spacing: 0.2rem;
+    // font-size: 35px;
+  }
+
   .second-section {
     flex-direction: column;
     height: calc(100vh - 12.8px);
@@ -546,7 +645,7 @@ nav {
 
   .fourth-section {
     flex-direction: column;
-    height: calc(150vh - 12.8px);
+    height: calc(210vh - 12.8px);
 
     .background-image {
       background: url(./images/desktop/image-graphic-design.jpg);
@@ -570,13 +669,18 @@ nav {
 
     .testimonial-container {
       margin-top: 50px;
+
+      .title {
+        letter-spacing: normal;
+      }
     }
   }
+}
 
+//for grid
+@media only screen and (max-width: 768px) {
   .sixth-section {
-    height: calc(80vh - 12.8px);
-    .background-image {
-      flex: 2;
-    }
+    height: calc(70vh - 12.8px);
+    grid-template-columns: repeat(2, 1fr);
   }
 }

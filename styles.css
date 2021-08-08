@@ -86,16 +86,34 @@ nav {
 .title-container {
   width: 100%;
   margin: 70px 0px 0px;
-  letter-spacing: 0.9rem;
+  letter-spacing: 0.7rem;
   text-transform: uppercase;
   font-family: "Fraunces", serif;
-  height: 10vh;
+  height: 20vh;
 }
 
 .title-container .title {
   color: white;
   text-align: center;
-  font-size: 40px;
+}
+
+.title-container .image-container {
+  width: 80%;
+  margin: 0 auto;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title-container .image-container img {
+  height: 20vh;
+  position: absolute;
+  bottom: 0px;
 }
 
 .second-section {
@@ -140,9 +158,13 @@ nav {
   color: #000;
   font-family: "Fraunces", serif;
   font-weight: 900;
+}
+
+.second-section .caption-details .title1:hover {
   text-decoration: underline;
   -webkit-text-decoration-color: #fad400;
           text-decoration-color: #fad400;
+  cursor: pointer;
 }
 
 .second-section .background-image {
@@ -206,7 +228,11 @@ nav {
 .third-section .content-container .content .title1 {
   color: #000;
   font-family: "Fraunces", serif;
+  cursor: pointer;
   font-weight: 900;
+}
+
+.third-section .content-container .content .title1:hover {
   text-decoration: underline;
   -webkit-text-decoration-color: #fe7867;
           text-decoration-color: #fe7867;
@@ -315,7 +341,7 @@ nav {
 .fifth-section .testimonial-container .title {
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.9rem;
+  letter-spacing: 0.7rem;
   font-family: "Fraunces", serif;
   color: #a7abae;
 }
@@ -453,20 +479,17 @@ nav {
 }
 
 .sixth-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   height: calc(55vh - 12.8px);
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
 }
 
 .sixth-section .background-image {
   background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
   background-size: cover;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -474,9 +497,6 @@ nav {
 .sixth-section .background-image1 {
   background-image: url(./images/desktop/image-gallery-orange.jpg);
   background-size: cover;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -484,9 +504,6 @@ nav {
 .sixth-section .background-image2 {
   background-image: url(./images/desktop/image-gallery-cone.jpg);
   background-size: cover;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -494,14 +511,96 @@ nav {
 .sixth-section .background-image3 {
   background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
   background-size: cover;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+footer {
+  max-width: 100%;
+  min-height: calc(50vh - 12.8px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #458c7e;
+}
+
+footer .content {
+  width: 80%;
+  margin: 0 auto;
+  min-height: calc(30vh - 12.8px);
+}
+
+footer .content .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .content .image-container svg .path {
+  fill: #25564b;
+}
+
+footer .content .footer-links-container {
+  width: 250px;
+  margin: 40px auto 40px auto;
+}
+
+footer .content .footer-links-container .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .content .footer-links-container .footer-links-item a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #25564b;
+  font-size: 18px;
+}
+
+footer .content .footer-links-container .footer-links-item a:hover {
+  color: white;
+}
+
+footer .content .social-media-icons {
+  width: 200px;
+  margin: 100px auto 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .content .social-media-icons svg {
+  cursor: pointer;
+}
+
+footer .content .social-media-icons svg .path {
+  fill: #25564b;
+}
+
+footer .content .social-media-icons svg .path:hover {
+  fill: white;
+}
+
 @media screen and (max-width: 768px) {
+  section.first-section {
+    background-image: url(./images/mobile/image-header.jpg);
+  }
   nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -567,6 +666,9 @@ nav {
     border-style: solid;
     border-color: transparent white white transparent;
   }
+  .title-container .image-container {
+    height: 45vh;
+  }
   .second-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -611,7 +713,7 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: calc(150vh - 12.8px);
+    height: calc(210vh - 12.8px);
   }
   .fourth-section .background-image {
     background: url(./images/desktop/image-graphic-design.jpg);
@@ -634,13 +736,16 @@ nav {
   .fifth-section .testimonial-container {
     margin-top: 50px;
   }
-  .sixth-section {
-    height: calc(80vh - 12.8px);
+  .fifth-section .testimonial-container .title {
+    letter-spacing: normal;
   }
-  .sixth-section .background-image {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
+}
+
+@media only screen and (max-width: 768px) {
+  .sixth-section {
+    height: calc(70vh - 12.8px);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 /*# sourceMappingURL=styles.css.map */
