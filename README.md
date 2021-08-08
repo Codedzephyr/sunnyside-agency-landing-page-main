@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repository](https://github.com/Codedzephyr/sunnyside-agency-landing-page-mainain)
+- Live Site URL: [Live Site URL](https://eager-euler-1e9530.netlify.app/)
 
 ## My process
 

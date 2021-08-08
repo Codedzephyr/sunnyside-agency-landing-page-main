@@ -95,12 +95,16 @@ nav {
   text-decoration: none;
   color: $White;
   padding: 10px 20px;
+  font-family: $Barlow;
+  font-weight: $fontweight9;
   font-size: $fontsize;
 } // closing styles for a tag
 
 .nav-links > li > a:hover {
   background-color: $White;
-  color: $Darkgrayishblue;
+  text-transform: uppercase;
+  color: $verydarkgrayishblue;
+  opacity: 0.3;
   border-radius: 16px;
 }
 

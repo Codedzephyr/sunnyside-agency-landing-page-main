@@ -74,12 +74,16 @@ nav {
   text-decoration: none;
   color: white;
   padding: 10px 20px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
   font-size: 18px;
 }
 
 .nav-links > li > a:hover {
   background-color: white;
-  color: #818498;
+  text-transform: uppercase;
+  color: #5a636c;
+  opacity: 0.3;
   border-radius: 16px;
 }
 
